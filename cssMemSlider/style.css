@@ -1,3 +1,18 @@
 body {
    background:  #F8B2A1;
+   font-size:10px;
+}
+.container {
+   max-width: 120em;
+   margin: 0 auto;
+}
+
+
+.slider__slides{
+   text-align: center;
+   display:flex;
+   overflow: hidden;
+}
+.slider__slide{
+   max-width: 100%;
 }
