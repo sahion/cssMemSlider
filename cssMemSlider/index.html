@@ -10,17 +10,17 @@
 <body>
    <div class="container">
       <div class="slider">
-         <div class="slider__inputs">
             <input type="radio" name="inputs" class="slider__input" id="slider__input1" checked>
             <input type="radio" name="inputs" class="slider__input" id="slider__input2">
             <input type="radio" name="inputs" class="slider__input" id="slider__input3">
             <input type="radio" name="inputs" class="slider__input" id="slider__input4">
-         </div>
-         <div class="slider__slides">
-            <div class="slider__slide1 slider__slide"><img src="./assets/img1.jpeg" alt=""></div>
-            <div class="slider__slide2 slider__slide"><img src="./assets/img2.jpeg" alt=""></div>
-            <div class="slider__slide3 slider__slide"><img src="./assets/img3.jpeg" alt=""></div>
-            <div class="slider__slide4 slider__slide"><img src="./assets/img4.jpeg" alt=""></div>
+         <div class="wrapper">
+            <div class="slider__images">
+               <div class="slider__image1 slider__image"></div>
+               <div class="slider__image2 slider__image"></div>
+               <div class="slider__image3 slider__image"></div>
+               <div class="slider__image4 slider__image"></div>
+            </div>
          </div>
          <div class="slider__information">
             <div class="slider__captions">
@@ -30,10 +30,10 @@
                <p class="slider__caption slider__caption4">Some text for 4th slider</p>
             </div>
             <div class="slider__controls">
-               <label for="slider__input1">1</label>
-               <label for="slider__input2">2</label>
-               <label for="slider__input3">3</label>
-               <label for="slider__input4">4</label>
+               <label class="slider__control" for="slider__input1"></label>
+               <label class="slider__control" for="slider__input2"></label>
+               <label class="slider__control" for="slider__input3"></label>
+               <label class="slider__control" for="slider__input4"></label>
             </div>
             </ul>
          </div>
