@@ -1,16 +1,39 @@
+@font-face {
+   font-family: "Comic Cat";
+   font-style: normal;
+   font-size:  400;
+   src: local("Roboto"),
+   url("./assets/fonts/Comic_Cat.woff2") format("woff2"),
+   url("./assets/fonts/Comic_Cat.otf") format("otf");
+}
+
+
+html{
+   margin: 0;
+}
+
 body {
    background:  #F8B2A1;
    font-size:10px;
+   margin: 0;
 }
 .container {
-   max-width: 120em;
+   max-width: 60%;
    margin: 0 auto;
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
  
 }
 .slider{
    background: #9A7EA6;
    border-radius:3em;
    padding:2em;
+   display: flex;
+   flex-direction: column;
+
+   gap: 3em;
 }
 .slider__input{
    display:none;
@@ -71,11 +94,23 @@ body {
 
 }
 
+.captions-wrapper{
+   height:7em;
+   overflow: hidden;
+}
 .slider__captions{
    font-size:3em;
    color: #42373D;
-   font-family: 'Courier New', Courier, monospace;
+   font-family: 'Comic Cat', Courier, monospace;
    font-size:bold;
+   transition: all 0.5s ease-in-out;
+   height:12em;
+   
+}
+.slider__caption{
+   margin: 0;
+   max-width:40vw;
+   height:3em;
 }
 
 
@@ -83,15 +118,24 @@ body {
    display:flex;
 }
 .slider__control{
+   
+   padding:1em;
+   height: 3em;
+   
+}
+.control__circle{
    border:5px solid #FDE2B1;
-   width: 2em;
-   height:2em;
+   display: block;
+   padding:1em;
    background: transparent;
    border-radius:50%;
    transition: all 0.5s ease-in-out;
 }
+
 .slider__control:hover{
    cursor:pointer;
+}
+.slider__control:hover > .control__circle{
    background:  #FDE2B1;
 }
 
@@ -106,4 +150,31 @@ body {
 }
  #slider__input4:checked ~ .wrapper > .slider__images{
    margin-left:-300%;
+}
+
+#slider__input1:checked ~ .slider__information > .slider__controls >.slider__control1 > .control__circle {
+   background: #C4889F;
+}
+#slider__input2:checked ~ .slider__information > .slider__controls >.slider__control2 > .control__circle {
+   background: #C4889F;
+}
+#slider__input3:checked ~ .slider__information > .slider__controls >.slider__control3 > .control__circle {
+   background: #C4889F;
+}
+#slider__input4:checked ~ .slider__information > .slider__controls >.slider__control4 > .control__circle {
+   background: #C4889F;
+}
+
+
+#slider__input1:checked ~ .slider__information > .captions-wrapper > .slider__captions{
+   margin-top:0;
+}
+#slider__input2:checked ~ .slider__information > .captions-wrapper > .slider__captions{
+   margin-top:-3em;
+}
+#slider__input3:checked ~ .slider__information > .captions-wrapper > .slider__captions{
+   margin-top: -6em;
+}
+#slider__input4:checked ~ .slider__information > .captions-wrapper > .slider__captions{
+   margin-top:-9em;
 }
